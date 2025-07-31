@@ -18,7 +18,7 @@
         <h2 class="text-sm tracking-wide md:text-base lg:text-2xl lg:mt-3 font-medium font-mono text-slate-200">
           FrontEnd Developer
         </h2>
-        <p class="text-xs text-center mt-1 tracking-wider md:text-base lg:text-xl lg:text-justify text-gray-400 font-mono">Construyo aplicaciones web desde cero al máximo
+        <p class="text-xs text-center mt-1 tracking-wider lg:text-xl lg:text-justify text-gray-400 font-mono">Construyo aplicaciones web desde cero al máximo
           detalle</p>
         <NavigationBar v-if="showNavigationBar" :active-section="activeSection" @update:activeSection="e => activeSection = e"/>
         <SocialMedia class="lg:mt-10" />

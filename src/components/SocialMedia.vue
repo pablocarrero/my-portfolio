@@ -17,7 +17,7 @@ import { Button } from './ui/button';
 const socialLinks = [
     {
         name: 'GitHub',
-        url: 'https://github.com/tu-usuario',
+        url: 'https://github.com/pablocarrero',
         icon: Github,
     },
     {

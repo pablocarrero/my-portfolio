@@ -47,7 +47,12 @@
   @keyframes animation-flink{
     to {
       width: 100%;
-      background: var(--color-teal-800);
+      background: linear-gradient(
+        to right,
+        var(--color-teal-400), /* teal-200 */
+        var(--color-teal-600), /* teal-300 */
+        var(--color-teal-800)
+      );
       backdrop-filter: blur(10px);
       padding: 8px;
       font-size: 16px;
@@ -59,6 +64,14 @@
   animation: animation-flink linear both;
   animation-timeline: scroll(root);
   animation-range: 0 180px;
+}
+@utility photo-border{
+  border-image: linear-gradient(
+  to left,
+  var(--color-teal-400), /* teal-200 */
+  var(--color-teal-600), /* teal-300 */
+  var(--color-teal-800)
+) 1;
 }
 @font-face {
   font-family: 'Inter';
