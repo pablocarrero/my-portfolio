@@ -1,5 +1,6 @@
 <template>
-    <div ref="contact" class="p-4" id="contact">
+    <slot name="title" />
+    <article ref="contact" class="p-4" id="contact">
         <h2 class="text-lg lg:text-2xl text-white font-semibold text-center lg:text-end mb-4">¿Crees que encajo en tu equipo?</h2>
         <h3 class="text-slate-300 font-mono mb-4 text-center">Si piensas que podríamos trabajar juntos, ¡escríbeme un correo y agendamos una
             llamada!</h3>
@@ -11,7 +12,7 @@
                 </p>
             </Button>
         </a>
-    </div>
+    </article>
 </template>
 
 <script setup lang="ts">

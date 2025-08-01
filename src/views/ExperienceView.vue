@@ -1,4 +1,5 @@
 <template>
+    <slot name="title" />
     <ol ref="experience" class="group" id="experience">
       <li
         v-for="project in experiencia"

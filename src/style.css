@@ -60,6 +60,10 @@
   }
 }
 
+.section-title{
+  @apply sticky top-9 z-30 py-4 text-sm tracking-widest text-white font-bold px-4 backdrop-blur-sm;
+}
+
 @utility header-animation{
   animation: animation-flink linear both;
   animation-timeline: scroll(root);

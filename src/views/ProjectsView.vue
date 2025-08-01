@@ -1,4 +1,5 @@
 <template>
+    <slot name="title" />
     <ol ref="projects" class="group" id="projects">
         <li v-for="project in proyectos" :key="project.id"
             class="mb-12 cursor-pointer transition-all duration-300 rounded-xl p-4
@@ -55,6 +56,17 @@ const proyectos = ref<Project[]>([
         alt: 'Portada de la web de Parasight',
         url: 'https://parasight.netlify.app/',
         description: 'Web para agrupar información sobre parásitos en colaboración conjunta con una persona experta en sus morfologías y ciclos y un diseñador de modelos 3D'
-    }
+    },
+    {
+        id: 2,
+        label: 'Amazinsight (Recopilador de opiniones para obtener valoracion final de un producto de Amazon mediante IA)',
+        srcset: `
+  ${new URL('../assets/img/foto-original-am.webp', import.meta.url).href} 1000w,
+  ${new URL('../assets/img/foto-movil-am.webp', import.meta.url).href} 400w,
+`,
+        alt: 'Portada de la web de Amazinsight',
+        url: 'https://amazinsight.netlify.app/',
+        description: 'Web en la que introduciendo un enlace de un producto de amazon, te ofrece una valoración del producto teniendo en cuentas todas las opiniones que los usuarios han dado sobre él mediante IA'
+    },
 ])
 </script>

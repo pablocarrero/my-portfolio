@@ -1,5 +1,5 @@
 <template>
-    <div class="font-light text-slate-400 leading-relaxed tracking-wider text-center px-4 lg:text-left" ref="about" id="about">
+    <article class="font-light text-slate-400 leading-relaxed tracking-wider text-center px-4 lg:text-left" ref="about" id="about">
         <p class="mb-5" v-once>
         Soy un desarrollador apasionado por crear interfaces de usuario accesibles que combinen un diseño cuidadoso con una ingeniería sólida. Mi <span class="font-bold text-white">trabajo favorito</span> se encuentra en la intersección del <span class="font-bold text-white">diseño</span> y el <span class="font-bold text-white">desarrollo</span>, creando experiencias que no solo se ven geniales sino que están meticulosamente construidas para brindar rendimiento y usabilidad.
         </p>
@@ -7,7 +7,7 @@
         <p class="mb-5">En otras etapas laborales, he trabajado en proyectos para clientes de gran envergadura a nivel nacional, incluso con otras tecnologías, demostrando así mi <span class="font-bold text-white">capacidad para adaptarme a cualquier entorno</span>.</p>
         <p class="mb-5">Me considero una persona <span class="font-bold text-white">proactiva, creativa y con habilidades de comunicación y liderazgo</span>.</p>
         <p>Me encanta pasar mi tiempo libre con mi familia, amigos, haciendo deporte, o jugando videojuegos acompañado siempre por mis tres fieles mascotas.</p>
-    </div>
+    </article>
 </template>
 
 <script setup lang="ts">

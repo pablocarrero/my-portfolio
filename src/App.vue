@@ -28,12 +28,24 @@
       </article>
       <section class="flex flex-col gap-10 text-xs font-light text-slate-400 leading-relaxed tracking-wider mt-4 lg:pl-40 lg:text-xl">
         <AboutView @section-change="handleSectionChange" />
-        <Separator class="mb-4  lg:mb-20"/>
-        <ExperienceView @section-change="handleSectionChange" />
-        <Separator class="mb-4 lg:mb-20"/>
-        <ProjectsView @section-change="handleSectionChange"/>
-        <Separator class="mb-4 lg:mb-20"/>
-        <ContactView @section-change="handleSectionChange" />
+        <Separator v-if="!showTitlesSection" class="mb-4  lg:mb-20"/>
+        <ExperienceView @section-change="handleSectionChange">
+          <template #title>
+            <h3 v-if="showTitlesSection" class="section-title">EXPERIENCIA LABORAL</h3>
+          </template>
+        </ExperienceView>
+        <Separator v-if="!showTitlesSection" class="mb-4 lg:mb-20"/>
+        <ProjectsView @section-change="handleSectionChange">
+          <template #title>
+            <h3 v-if="showTitlesSection" class="section-title">PROYECTOS</h3>
+          </template>
+        </ProjectsView>
+        <Separator v-if="!showTitlesSection" class="mb-4 lg:mb-20"/>
+        <ContactView @section-change="handleSectionChange">
+          <template #title>
+            <h3 v-if="showTitlesSection" class="section-title">CONTACTO</h3>
+          </template>
+        </ContactView>
       </section>
     </section>
 
@@ -85,6 +97,7 @@ const MD_BREAKPOINT = 768
 
 const showNavigationBar = computed(()=> width.value >= LG_BREAKPOINT)
 const showScrollToTopButton = computed(()=> width.value <= MD_BREAKPOINT && showButton.value)
+const showTitlesSection = computed(()=> width.value <= MD_BREAKPOINT)
 
 const activeSection = ref("about")
 
